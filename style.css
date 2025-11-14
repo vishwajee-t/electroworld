@@ -1,0 +1,196 @@
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #000;      /* pure black background */
+  color: #fff;           /* default text white for readability */
+}
+
+/* Header */
+header {
+  background: #111;      /* dark header */
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #ffcc00;        /* brand color */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.product-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.product-grid::-webkit-scrollbar-thumb {
+  background: #ffcc00;
+  border-radius: 4px;
+}
+
+/* Product Card */
+.product {
+  flex: 0 0 auto;           /* fixed width, no wrap */
+  width: 100%;
+  background: #fff;         /* white card */
+  color: #000;              /* text inside card */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+  text-align: center;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(255,255,255,0.2);
+}
+ .search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffcc00;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+  margin: auto; /* center karne ke liye */
+}
+
+#searchBar {
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  width: 250px;
+}
+
+.search-btn {
+  background: #ffcc00;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.search-btn:hover {
+  background: #ffd633;
+}
+
+/* Product Image */
+\.product img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  background-color: #f9f9f9; /* optional for padding look */
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+.product:hover img {
+  transform: scale(1.05);
+}
+
+/* Product Text */
+.product h3 {
+  font-size: 1.1rem;
+  margin: 10px 0 5px;
+  color: #222;           /* dark text inside white card */
+}
+
+.product p {
+  font-weight: bold;
+  color: #ff5722;         /* price highlight */
+  margin: 0;
+}
+
+/* Buttons */
+button {
+  background: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+#searchBar {
+  padding: 6px 10px;
+  margin-left: 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.9rem;
+}
+
+
+button:hover {
+  background: #ffd633;
+  transform: scale(1.05);
+}
+
+/* Main Layout */
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .product img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .product img {
+    height: 160px;
+  }
+}
